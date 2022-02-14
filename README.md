@@ -186,7 +186,7 @@ https://youtu.be/IAk0OnLwEMk
 Now you can see the the concetual map for the assignment:
 
 ____________________________________________
-![Screenshot](ThirdAsmRt1.png)
+![Screenshot](ThirdAsmRT1.png)
 __________________________________
 
 

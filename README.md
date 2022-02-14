@@ -67,31 +67,61 @@ PSEUDOCODE:
 script cont_move.cpp rapresent node /contmove_rob
 ----
 
-declaration of global variable;
-declared publisher pub1;
-defined function vel();
-taiking data from geometry_msgs/Point32;
-declaration of function assistCont();
-declaration variable of function assistCont();
-making average of data recived from 0 to 260 taked from /LaserScan;
-making average of data recived from 280 to 440 taked from /LaserScan;
-making average of data recived from 440 to 720 taked from /LaserScan;
-chek if assistent control is activate;
-(assistcontrol ON)if obstacle is at distance < 0.5 robot not go on;
-(assistcontrol ON)if obstacle is at distance rigt < 0.7 robot not turn Right;
-(assistcontrol ON)if obstacle is at distance left < 0.7 robot not turn left;
-chek if go to poit is active;
-(go to point OFF) set linear velocity;
-(go to point OFF) set angular velocity;
-(go to point OFF) public velocity;
-main();
-defined node contmove_rob
-defined the nodeHandler;
-defined publisher;
-loop andless;
-defined and calling sb scriber sub2(/vel_cont);
-defined and calling sb scriber sub2(/scan);
-spin;
+declaration of global variable;                           
+declared publisher pub1;                                
+defined function vel();                               
+taiking data from geometry_msgs/Point32;                                
+declaration of function assistCont();                               
+declaration variable of function assistCont();                                  
+making average of data recived from 0 to 260 taked from /LaserScan;                             
+making average of data recived from 280 to 440 taked from /LaserScan;                                 
+making average of data recived from 440 to 720 taked from /LaserScan;                             
+chek if assistent control is activate;                                                      
+(assistcontrol ON)if obstacle is at distance < 0.5 robot not go on;                                 
+(assistcontrol ON)if obstacle is at distance rigt < 0.7 robot not turn Right;                             
+(assistcontrol ON)if obstacle is at distance left < 0.7 robot not turn left;                                
+chek if go to poit is active;                                                                         
+(go to point OFF) set linear velocity;                                                  
+(go to point OFF) set angular velocity;                                                               
+(go to point OFF) public velocity;                                                                       
+main();                                                                                             
+defined node contmove_rob;                                                         
+defined the nodeHandler;                                    
+defined publisher;                                        
+loop andless;                                           
+defined and calling sb scriber sub2(/vel_cont);                                             
+defined and calling sb scriber sub2(/scan);                                                       
+spin;                                                       
 
-script cont_move.cpp rapresent node /navi_rob
+script navi_goal_rob.cpp rapresent node /navi_rob
 ----
+
+declaration of action client MoveBaseAction;
+declaration of publisher pub;
+defined function of goPoint();
+defined the client ac;
+sending message;
+ac wainting for server;
+declaration variable x,y,cont;
+sendig message at the user;
+taking imput from user;
+starting while with cont <=0;
+cheking if the cordinate is outside of perimeter;
+(position outside of perimeter)taking new position from user and ri-chek it;
+sending to node /contmove_rob to stop publication on cmd_vel;
+defining variable to will set the parameter for client ;
+setting parameter for the client;
+sending message for information;
+sending the goal to the server;
+asking to the user if he want to calcel the goal;
+(YES)canceling goal;
+(NO)contiuing and starting the timeout for reaching the point(25 second);
+given the reponse of wath robot do;
+defined the function controller();
+declarationof variabele;
+starting of loop endless;
+output graphics for user;
+taking imput from user;
+
+
+

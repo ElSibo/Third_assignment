@@ -179,5 +179,12 @@ $  rosrun navi_goal_rob navi_goal_rob
 ```
 
 
+I am attaching the link to see the video of the simulation
+---
+https://youtu.be/IAk0OnLwEMk
+
+Now you can see the the concetual map for the assignment:
+
+[SecondAsmRT.pdf](https://github.com/ElSibo/Second_Assignment/files/7702802/ThirdAsmRT.pdf)
 
 

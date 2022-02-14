@@ -185,6 +185,6 @@ https://youtu.be/IAk0OnLwEMk
 
 Now you can see the the concetual map for the assignment:
 
-[SecondAsmRT.pdf](https://github.com/ElSibo/Second_Assignment/files/7702802/ThirdAsmRT.pdf)
+![Screenshot](ThirdAsmRT.pdf)
 
 

@@ -1,4 +1,4 @@
-# Third_assignment
+# THIRD_ASSIGNMENT
 --------------------
 
   INTRODACTION:
@@ -59,3 +59,39 @@ Finally we created a launch file that starts the simulator,
 and the cont_move node in one terminal and the navi_goal_rob.cpp node (graphical interface) in another terminal.
 ____________________________________________
 ![Screenshot](rosgraph.png)
+__________________________________
+
+PSEUDOCODE:
+------------
+
+script cont_move.cpp rapresent node /contmove_rob
+----
+
+declaration of global variable;
+declared publisher pub1;
+defined function vel();
+taiking data from geometry_msgs/Point32;
+declaration of function assistCont();
+declaration variable of function assistCont();
+making average of data recived from 0 to 260 taked from /LaserScan;
+making average of data recived from 280 to 440 taked from /LaserScan;
+making average of data recived from 440 to 720 taked from /LaserScan;
+chek if assistent control is activate;
+(assistcontrol ON)if obstacle is at distance < 0.5 robot not go on;
+(assistcontrol ON)if obstacle is at distance rigt < 0.7 robot not turn Right;
+(assistcontrol ON)if obstacle is at distance left < 0.7 robot not turn left;
+chek if go to poit is active;
+(go to point OFF) set linear velocity;
+(go to point OFF) set angular velocity;
+(go to point OFF) public velocity;
+main();
+defined node contmove_rob
+defined the nodeHandler;
+defined publisher;
+loop andless;
+defined and calling sb scriber sub2(/vel_cont);
+defined and calling sb scriber sub2(/scan);
+spin;
+
+script cont_move.cpp rapresent node /navi_rob
+----

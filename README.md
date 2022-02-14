@@ -153,7 +153,7 @@ $ mkdir –p/my_ros_ws/src
 Dowload the folder where there are the node, Cmakelist, pakage and the launch file;
 
 ```bash
-$ git clone https://github.com/ElSibo/Second_Assignment.git
+$ git clone https://github.com/ElSibo/Third_assignment.git
 $ cd ..
 $ catkin_make
 $ rospack profile
@@ -164,8 +164,20 @@ if you want to launch the simulator of mobile robot whit launch file and not man
 In the end enter this:
 
 ```bash
-$ roslaunch scr/Third_assignment/navi_goal_rob.launch
+$ roslaunch scr/Third_assignment/navi_rob.launch
 ```
+if you use manualy way(in different terminal):
+
+```bash
+$ roslaunch final_assignment simulation_gmapping.launch &
+$ roslaunch final_assignment move_base.launch &
+$ rosrun navi_goal_rob contmove_rob &
+```
+indifferent terminal:
+```bash
+$  rosrun navi_goal_rob navi_goal_rob 
+```
+
 
 
 

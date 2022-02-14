@@ -96,32 +96,76 @@ spin;
 script navi_goal_rob.cpp rapresent node /navi_rob
 ----
 
-declaration of action client MoveBaseAction;
-declaration of publisher pub;
-defined function of goPoint();
-defined the client ac;
-sending message;
-ac wainting for server;
-declaration variable x,y,cont;
-sendig message at the user;
-taking imput from user;
-starting while with cont <=0;
-cheking if the cordinate is outside of perimeter;
-(position outside of perimeter)taking new position from user and ri-chek it;
-sending to node /contmove_rob to stop publication on cmd_vel;
-defining variable to will set the parameter for client ;
-setting parameter for the client;
-sending message for information;
-sending the goal to the server;
-asking to the user if he want to calcel the goal;
-(YES)canceling goal;
-(NO)contiuing and starting the timeout for reaching the point(25 second);
-given the reponse of wath robot do;
-defined the function controller();
-declarationof variabele;
-starting of loop endless;
-output graphics for user;
-taking imput from user;
+declaration of action client MoveBaseAction;                                                  
+declaration of publisher pub;                                                                 
+defined function of goPoint();                                                                    
+defined the client ac;                                                                            
+sending message;                                                                                
+ac wainting for server;                                                                           
+declaration variable x,y,cont;                                                                    
+sendig message at the user;                                                                       
+taking imput from user;                                                                           
+starting while with cont <=0;                                                                       
+cheking if the cordinate is outside of perimeter;                                                   
+(position outside of perimeter)taking new position from user and ri-chek it;                            
+sending to node /contmove_rob to stop publication on cmd_vel;                           
+defining variable to will set the parameter for client ;                                            
+setting parameter for the client;                                                             
+sending message for information;                                                            
+sending the goal to the server;                                                                                                
+asking to the user if he want to calcel the goal;                                                     
+(YES)canceling goal;                                                                            
+(NO)contiuing and starting the timeout for reaching the point(25 second);                               
+given the reponse of wath robot do;                                                             
+defined the function controller();                                                              
+declarationof variabele;                                                                          
+starting of loop endless;                                           
+output graphics for user;                                                                   
+taking imput from user;                                                             
+if imput is 'e' robot increase velocity;                                                    
+if imput is 'd' robot decrease velocity;                                                                  
+if imput is 'f' robot turn left;                                                                        
+if imput is 'd' robot turn right;                                                                     
+if imput is 'r' stop the robot;                                                                           
+if the imput is 'a'came out from loop;                                                                
+main();                                                                                           
+defined the node navi_goal_rob;                                                         
+defined the node handler nn;                                                                
+pri t the graphics for user;                                                                    
+taking imput from the user;                                                                       
+if imput is 'A' call the function goPoint()(stop the publication of node /contmove_rob);                  
+if imput is 'B' call the function controller()(assistent controller OFF);                                 
+if imput is 'C' call the function controller()(assistent controller on);                              
+if the imput is 's' came out from loop; 
+
+--------------------------------------------
+INSTALLING AND RUNNING:
+---
+_________
+
+
+After the installation of ROS,(I use a linux(Ubuntu 20.04) operator sistem), you shoud be create your work space;
+
+```bash
+$ mkdir –p/my_ros_ws/src
+ $ cd –p/my_ros_ws/src
+```
+Dowload the folder where there are the node, Cmakelist, pakage and the launch file;
+
+```bash
+$ git clone https://github.com/ElSibo/Second_Assignment.git
+$ cd ..
+$ catkin_make
+$ rospack profile
+$ rosclean purge
+```
+You must be go inside the folder(the same folder where is present the lunch file),
+if you want to launch the simulator of mobile robot whit launch file and not manualy.                                 
+In the end enter this:
+
+```bash
+$ roslaunch scr/Third_assignment/navi_goal_rob.launch
+```
 
 
 

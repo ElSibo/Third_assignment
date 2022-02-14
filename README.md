@@ -57,3 +57,5 @@ and it sends to cont_move.cpp using / vel_cont; If you want to stop the robot,
 enter 'R' (resetting the speeds) or if you want to return to the initial menu, enter 'A'.
 Finally we created a launch file that starts the simulator,
 and the cont_move node in one terminal and the navi_goal_rob.cpp node (graphical interface) in another terminal.
+____________________________________________
+![Screenshot](rosgraph.png)

@@ -29,7 +29,7 @@ To develop this application we have created two nodes written in C ++, using ROS
 the nodes we have developed are cont_move.cpp (control moviment) and navi_goal_rob.cpp (navigation and goal for robot). 
 These two nodes communicate with each other and one interfaces with the user, while the other communicates with the robot.
 The cont_move.cpp node communicates through publisher/subscriber with /cmd_vel, 
-with nodonavi_goal_rob.cpp and with  Laserscan.
+with node navi_goal_rob.cpp and with  Laserscan.
 It receives information from navi_goal_rob.cpp, 
 which indicates whether the user wants to increase or decrease the speed of the robot or if he wants to turn left or right,
 and tells him whether the user wants to activate the assistant controller or not;
